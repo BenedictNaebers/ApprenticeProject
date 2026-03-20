@@ -1,0 +1,21 @@
+# Hier werden die Konfigurationen für die Spring Boot Anwendung festgelegt
+# wie Datenbankverbindung, Serverport und JPA-Einstellungen.
+# auch hier musst du eigentlich nichts ändern
+# ddl-auto: create-drop bedeutet, dass die Datenbanktabellen bei jedem neustart erst gelöscht (drop) und dann neu erstellt werden
+# gleichzeitig läuft DemoTestData.kt bei jedem Start durch und füllt die Datenbank mit Testdaten
+
+server:
+    port: 9090
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/mydatabase
+    username: myuser
+    password: secret
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect

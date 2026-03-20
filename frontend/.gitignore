@@ -1,0 +1,21 @@
+# IntelliJ IDEA
+.idea/
+/.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# NetBeans
+/nbproject/private/
+/nbproject/gradle.properties
+/nbbuild/
+/dist/
+/nbdist/
+
+# macOS
+.DS_Store

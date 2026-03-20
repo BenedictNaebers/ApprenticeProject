@@ -1,0 +1,248 @@
+= Programmiergrundlagen
+
+
+
+Als Programmierer ist es wichtig zu verstehen, welche verschiedenen Arten von Daten in einem Programm verwendet werden können um Informationen zu speichern bzw. zu verarbeiten.
+
+Daher schauen wir uns nun mal ein paar der wichtigsten `Datentypen` genauer an:
+
+---
+== Datentypen
+
+=== Strings
+Strings sind eine Folge von Zeichen, die oft verwendet werden, um Text zu speichern, wie z.B. Namen oder Adressen.
+
+*Beispiel:*
+----
+"Das ist ein String"
+----
+=== Ganzzahlen (Integer)
+Ganzzahlen repräsentieren eine ganze Zahl, wie zum Beispiel 1, 2, 3 oder 4. Sie werden häufig verwendet, um mathematische Berechnungen durchzuführen.
+
+*Beispiel:*
+----
+7
+----
+=== Fließkommazahlen (Float)
+Fließkommazahlen repräsentieren Dezimalzahlen, wie zum Beispiel 3.14 oder 2.5. Sie werden ebenfalls oft verwendet, um mathematische Berechnungen durchzuführen.
+
+*Beispiel:*
+----
+3.5
+----
+=== Boolean
+Booleans sind Wahrheitswerte und können entweder wahr oder falsch sein. Sie werden oft in logischen Ausdrücken verwendet, um Entscheidungen zu treffen oder Bedingungen zu überprüfen.
+
+*Beispiel:*
+----
+true
+----
+=== Arrays
+Arrays sind eine Sammlung von Elementen desselben Datentyps. Sie werden oft verwendet, um mehrere Werte desselben Typs zu speichern und zu verarbeiten.
+
+*Beispiel:*
+----
+["Hase", "Hund", "Vogel", "Katze"]      //Array, der mehrere Werte vom Typ String enthält
+----
+Jetzt, wo du die verschiedenen Datentypen kennst, lass uns einen Blick auf `Variablen` und `Konstanten` werfen.
+
+== Variablen und Konstanten
+
+=== Variablen
+Variablen sind wie Container, in denen du Daten speichern kannst. In vielen Programmiersprachen wird eine Variable durch das Schlüsselwort "var" angelegt. Auch wir benutzen bei JavaScript erst einmal "var", es kann aber gut sein, dass Tutorials mit "let" arbeiten. Der konkrete Unterschied ist dabei erstmal nicht so wichtig, du kannst "var" und "let" synonym behandeln!
+
+*Beispiel:*
+
+----
+var zahl = 10;		        //Hier wird der Integer 10 der Variable zahl zugeordnet
+var text = "Hallo Welt!";	//Hier wird der String "Hallo Welt!" der Variable text zugeordnet
+----
+Variablen können sich während des Programms ändern und dir erlauben, flexibler mit deinen Daten zu arbeiten.
+
+=== Konstanten
+Konstanten sind auch Container, aber im Gegensatz zu Variablen können sie nicht geändert werden. Sie werden verwendet, um Werte zu speichern, die sich im Programm nicht ändern. In vielen Programmiersprachen, einschließlich unseres Beispiels JavaScript, wird eine Konstante durch das Schlüsselwort const angelegt.
+
+*Beispiel:*
+----
+const hatBlaueAugen = true;	    //Hier wird der Boolean true der Konstanten hatBlaueAugen zugeordnet
+const pi = 3.1415;		        //Hier wird der Float 3.1415 der Konstanten pi zugeordnet
+----
+Ab jetzt werden wir auch immer ein paar Beispiele praktisch anwenden. Dazu kannst du die Datei Basics_Aufgaben.js öffnen
+
+Für unsere Beispiele benutzen wir die Programmiersprache `JavaScript`. Um einen ersten Eindruck zu bekommen, kannst du Variablen und Konstanten erstellen und ihre Werte in der Konsole ausgeben lassen.
+
+*Zum Beispiel so:*
+----
+var meineVariable = 27;
+console.log(meineVariable);	    //Diese Zeile schreibt den Wert von meineVariable in die Konsole
+----
+Ausführen kannst du den Code mit F5. Probier es gerne selbst aus und spiele ein bisschen mit Variablen und Werten herum. Wenn du Fragen hast oder Hilfe benötigst, melde dich einfach!
+
+Als nächstes werden wir uns mit `Operatoren` beschäftigen.
+
+
+== Operatoren
+Variablen und Konstanten sind wichtig, aber ohne Operatoren können sie nicht viel tun. Operatoren sind wichtige Werkzeuge, die es erlauben, Aktionen auf Variablen und Konstanten auszuführen und sie so zu manipulieren. Ob es darum geht, zwei Zahlen zu addieren oder eine Bedingung zu überprüfen, Operatoren ermöglichen es Programmierern, komplexe Aktionen mit nur wenigen Codezeilen auszuführen. Ohne Operatoren wäre die Programmierung sehr eingeschränkt und schwierig. Mit einigen Beispielen wird das ganze gleich verständlich:
+
+=== Arithmetische Operatoren:
+Sie werden für grundlegende Rechenoperationen wie Addition (+), Subtraktion (-), Multiplikation (*) und Division (/) verwendet.
+
+*Beispiel:*
+----
+var a = 10
+var b = 5
+var addition = a + b		//addition hat den Wert 15
+var subtraktion = a - b 	//subtraktion hat den Wert 5
+----
+
+=== Vergleichsoperatoren:
+Mit ihnen kannst du zwei Werte vergleichen und herausfinden, ob sie gleich (== bzw. ===), ungleich (!= bzw. !==), größer (>) oder kleiner (<) sind.
+
+*Beispiel:*
+----
+var a = 10
+var b = 5
+var gleich = a == b		//gleich hat den Wert false
+var ungleich = a != b	//ungleich hat den Wert true
+----
+=== Logische Operatoren:
+Sie verknüpfen mehrere Bedingungen und geben ein Ergebnis (true oder false) zurück. Die wichtigsten sind and (&&), or (||) und not.
+
+*Beispiel:*
+----
+var a = True
+var b = False
+var beide = a && b		        //beide hat den Wert false
+var einsVonBeiden = a || b	    //einsVonBeiden hat den Wert true
+----
+
+=== Zuweisungsoperatoren:
+Sie weisen Werten einer Variablen zu oder aktualisieren sie. Der einfachste ist =. Es gibt auch erweiterte Zuweisungsoperatoren wie += (addiert einen Wert zu einer Variable hinzu) und -= (zieht einen Wert von einer Variable ab).
+
+*Beispiel:*
+----
+var a = 10
+a += 5		//a ist jetzt 15
+a -= 3  	//a ist jetzt 12
+----
+Diese Operatoren helfen dir, mit Daten zu arbeiten und Berechnungen in deinen Programmen durchzuführen.
+Um herauszufinden, ob du verstanden hast wie diese Operatoren funktionieren, überlege dir welchen Wert die folgenden Variablen haben und überprüfe deine Vermutung in Basics_Aufgaben.js.
+----
+var a = 15;
+var b = 5;
+var c = 3;
+
+var ergebnis1 = a + b + c;
+var ergebnis2 = c  * ( b - c);
+var ergebnis3 = (a / b) === c;
+var ergebnis4 = (a - b) > c;
+var ergebnis5 = a === 15 && b === c;
+var ergebnis6 = c !== 6 || b !== 5;
+----
+
+
+== Funktionen
+Jetzt, wo du weißt, was `Datentypen`, `Variablen`, `Konstanten` und `Operatoren` sind, können wir zur nächsten Stufe der Programmierung übergehen: `Funktionen`.
+
+Funktionen sind wie kleine Programme innerhalb eines größeren Programms, die eine bestimmte Aufgabe ausführen und möglicherweise ein Ergebnis zurückgeben. Stell dir vor, du hast eine wiederkehrende Aufgabe, die du immer wieder manuell erledigen musst. Mit einer Funktion kannst du den Code einmal schreiben und ihn immer wieder aufrufen, wenn du ihn benötigst. Das spart Zeit und macht deinen Code besser strukturiert und lesbar. In den nächsten Abschnitten werde ich dir zeigen, wie man Funktionen in der Programmierung verwendet.
+
+----
+function addiere(a, b) {
+    var summe = a + b;
+    return summe;
+}
+----
+
+In diesem Beispiel wird eine Funktion mit dem Namen "addiere" definiert, die zwei Parameter (auch Argumente genannt) "a" und "b" hat. In der Funktion wird der Wert von "a" und "b" addiert und in der Variablen "summe" gespeichert. Dann wird die Summe mit dem Schlüsselwort "return" zurückgegeben, damit sie von der Stelle aus verwendet werden kann, an der die Funktion aufgerufen wurde.
+
+Du rufst die Funktion auf, indem du ihren Namen aufrufst und die Argumente in Klammern dahinter setzt.
+Hier ist ein Beispiel, das du in Basics_Aufgaben.js überprüfen kannst:
+----
+var ergebnis = addiere(3, 5);
+console.log(ergebnis);
+----
+In diesem Beispiel wird die Funktion "addiere" mit den Argumenten 3 und 5 aufgerufen. Die Summe von 3 und 5 wird in der Funktion berechnet und in der Variablen "ergebnis" gespeichert.
+Danach lassen wir uns das Ergebnis in der Konsole ausgeben.
+
+Es gibt auch Funktionen, die keinen Wert zurückgeben, sondern nur eine Aktion ausführen.
+
+*Hier ist ein Beispiel:*
+----
+function gruss(name) {
+    console.log("Hallo " + name + "!");
+}
+----
+In diesem Beispiel wird eine Funktion mit dem Namen "gruss" definiert, die einen Parameter "name" hat. In der Funktion wird eine Nachricht mit dem Namen erstellt (mehrere Strings werden hier mit "+" zusammengefügt) und in der Konsole ausgegeben.
+
+Du rufst die Funktion auf, indem du ihren Namen aufrufst und die Argumente in Klammern dahinter setzt.
+----
+gruss("Max");      //Ausgabe: Hallo Max!
+----
+In diesem Beispiel wird die Funktion "gruss" mit dem Argument "Max" aufgerufen. Die Funktion gibt die Nachricht "Hallo Max!" in der Konsole aus.
+
+Nachdem wir jetzt eine grobe Vorstellung davon haben, was es mit Funktionen auf sich hat (nämlich die Möglichkeit Code zu organisieren und wiederverwendbar zu machen), werden wir nun einen Blick auf `If/Else-Statements` werfen.
+
+== If/Else-Statements
+`If/Else-Statements` sind ein grundlegendes Konzept in der Programmierung, das es ermöglicht, Codebedingungen zu erstellen. Sie helfen dabei, Entscheidungen zu treffen und die Ausführung des Programms entsprechend zu steuern.
+
+Ein If-Statement wird verwendet, um eine Bedingung zu prüfen. Wenn die Bedingung erfüllt ist, wird der Code innerhalb des If-Blocks ausgeführt. Wenn die Bedingung nicht erfüllt ist, wird der Code innerhalb des If-Blocks übersprungen. Hier ist ein Beispiel für ein If-Statement in JavaScript:
+
+----
+var number = 5;
+
+if (number > 0) {
+  console.log("Die Zahl ist positiv");
+}
+----
+
+In diesem Beispiel wird die Variable number mit dem Wert 5 initialisiert. Das If-Statement prüft, ob number größer als 0 ist. Da dies der Fall ist, wird der Code innerhalb des If-Blocks ausgeführt und die Nachricht "Die Zahl ist positiv" wird auf der Konsole ausgegeben.
+
+Ein Else-Statement kann mit einem If-Statement kombiniert werden, um eine alternative Aktion auszuführen, wenn die Bedingung nicht erfüllt ist. Das Else-Statement wird ausgeführt, wenn die Bedingung des If-Statements nicht erfüllt ist. Hier ist ein Beispiel für ein If/Else-Statement:
+
+----
+var number = -2;
+
+if (number > 0) {
+  console.log("Die Zahl ist positiv");
+} else {
+  console.log("Die Zahl ist negativ oder gleich Null");
+}
+----
+
+In diesem Beispiel wird die Variable number mit dem Wert -2 initialisiert. Das If-Statement prüft, ob number größer als 0 ist. Da dies nicht der Fall ist, wird der Code innerhalb des Else-Blocks ausgeführt und die Nachricht "Die Zahl ist negativ oder gleich Null" wird auf der Konsole ausgegeben.
+
+Schreibe gerne ein paar If/Else-Statements um zu überprüfen ob du das Konzept verstanden hast.
+
+If/Else-Statements sind ein wichtiger Teil der Programmierung und können verwendet werden, um komplexe Logik in einem Programm zu implementieren. Es ist wichtig, die Syntax und Logik von If/Else-Statements zu verstehen, um effektivere Programme schreiben zu können. Ebenfalls nicht wegzudenken sind die sogenannten `Loops` bzw. `Schleifen`.
+
+== Schleifen (Loops)
+
+Schleifen sind ein weiteres grundlegendes Konzept in der Programmierung. Sie ermöglichen es, Code wiederholt auszuführen, bis eine bestimmte Bedingung erfüllt ist.
+
+Die For-Schleife ist eine der am häufigsten verwendeten Schleifen - sie besteht aus drei Teilen: der Initialisierung, der Bedingung und dem Ausdruck. Die Initialisierung wird zu Beginn der Schleife einmal ausgeführt. Die Bedingung wird bei jedem Schleifendurchlauf überprüft. Wenn die Bedingung erfüllt ist, wird der Code innerhalb der Schleife ausgeführt. Der Ausdruck wird am Ende jedes Schleifendurchlaufs ausgeführt. Hier ist ein Beispiel für eine For-Schleife:
+
+----
+for (var i = 0; i < 5; i++) {
+  console.log(i);
+}
+----
+
+In diesem Beispiel wird die Schleife 5-mal durchlaufen, da die Bedingung i < 5 fünf Durchläufe lang erfüllt ist. In jedem Schleifendurchlauf wird die Variable i um 1 erhöht und der Wert von i wird auf der Konsole ausgegeben.
+
+Eine While-Schleife wird ausgeführt, solange eine bestimmte Bedingung erfüllt ist. Hier ist ein Beispiel für eine While-Schleife in JavaScript:
+----
+var i = 0;
+
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+----
+In diesem Beispiel wird die Schleife solange ausgeführt, wie die Bedingung i < 5 erfüllt ist. In jedem Schleifendurchlauf wird der Wert von i auf der Konsole ausgegeben und um 1 erhöht.
+
+Auch hier darfst du dir gerne ein paar Loops ausdenken und ausprobieren :)
+
+Schleifen gehören zu den grundlegenden Konzepten der Programmierung und sind ein mächtiges Werkzeug zur Automatisierung von Aufgaben, die sich wiederholen.
+
+
+
